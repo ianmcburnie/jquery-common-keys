@@ -139,7 +139,7 @@
                         default:
                             break;
                     }
-                }
+                };
 
                 $this.on('keydown', onKeyDown);
                 $this.on('keyup', onKeyUp);
