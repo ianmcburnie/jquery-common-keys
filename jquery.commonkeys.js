@@ -1,7 +1,7 @@
 /**
 * @function $.fn.commonKeys
 * @name jquery-common-keys
-* @version 0.3.2
+* @version 0.3.3
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc jQuery collection plugin that triggers events for common accessibility
 * keys e.g. ENTER, SPACE, ESCAPE, ARROW KEYS.
