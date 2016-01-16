@@ -20,7 +20,7 @@ Please use the tilde range specifier in your package.json to pin to a fixed majo
 ## Install
 
 ```js
-npm install @ebay/jquery-common-keys --save
+npm install @ebay/jquery-common-keys
 ```
 
 ## Example
@@ -28,7 +28,7 @@ npm install @ebay/jquery-common-keys --save
 ```html
 <div tabindex="0" role="button">Fake Button</div>
 
-$('div[role=button]').commonKeys().on('space.commonKeyDown enter.commonKeyDown', function(e) {
+$('div[role=button]').commonKeys().on('spaceKeyDown enterKeyDown', function(e) {
     // activate fake button
 });
 ```
@@ -37,29 +37,29 @@ $('div[role=button]').commonKeys().on('space.commonKeyDown enter.commonKeyDown',
 
 ## Events
 
-* `enter.commonKeyDown`
-* `escape.commonKeyDown`
-* `space.commonKeyDown`
-* `pageup.commonKeyDown`
-* `pagedown.commonKeyDown`
-* `end.commonKeyDown`
-* `home.commonKeyDown`
-* `leftarrow.commonKeyDown`
-* `uparrow.commonKeyDown`
-* `rightarrow.commonKeyDown`
-* `downarrow.commonKeyDown`
+* `enterKeyDown`
+* `escapeKeyDown`
+* `spaceKeyDown`
+* `pageUpKeyDown`
+* `pageDownKeyDown`
+* `endKeyDown`
+* `homeKeyDown`
+* `leftArrowKeyDown`
+* `upArrowKeyDown`
+* `rightArrowKeyDown`
+* `downArrowKeyDown`
 
-* `enter.commonKeyUp`
-* `escape.commonKeyUp`
-* `space.commonKeyUp`
-* `pageup.commonKeyUp`
-* `pagedown.commonKeyUp`
-* `end.commonKeyUp`
-* `home.commonKeyUp`
-* `leftarrow.commonKeyUp`
-* `uparrow.commonKeyUp`
-* `rightarrow.commonKeyUp`
-* `downarrow.commonKeyUp`
+* `enterKeyUp`
+* `escapeKeyUp`
+* `spaceKeyUp`
+* `pageUpKeyUp`
+* `pageDownKeyUp`
+* `endKeyUp`
+* `homeKeyUp`
+* `leftArrowKeyUp`
+* `upArrowKeyUp`
+* `rightArrowKeyUp`
+* `downArrowKeyUp`
 
 ## Constants
 

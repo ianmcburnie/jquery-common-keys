@@ -1,21 +1,32 @@
 /**
 * @function $.fn.commonKeys
 * @name jquery-common-keys
-* @version 0.3.5
+* @version 0.4.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc jQuery collection plugin that triggers events for common accessibility
 * keys e.g. ENTER, SPACE, ESCAPE, ARROW KEYS.
-* @fires {object} enter.commonKeyDown
-* @fires {object} escape.commonKeyDown
-* @fires {object} space.commonKeyDown
-* @fires {object} pageup.commonKeyDown
-* @fires {object} pagedown.commonKeyDown
-* @fires {object} end.commonKeyDown
-* @fires {object} home.commonKeyDown
-* @fires {object} leftarrow.commonKeyDown
-* @fires {object} uparrow.commonKeyDown
-* @fires {object} downarrow.commonKeyDown
-* @fires {object} rightarrow.commonKeyDown
+* @fires {object} enterKeyDown
+* @fires {object} escapeKeyDown
+* @fires {object} spaceKeyDown
+* @fires {object} pageUpKeyDown
+* @fires {object} pageDownKeyDown
+* @fires {object} endKeyDown
+* @fires {object} homeKeyDown
+* @fires {object} leftArrowKeyDown
+* @fires {object} upArrowKeyDown
+* @fires {object} downArrowKeyDown
+* @fires {object} rightArrowKeyDown
+* @fires {object} enterKeyUp
+* @fires {object} escapeKeyUp
+* @fires {object} spaceKeyUp
+* @fires {object} pageUpKeyUp
+* @fires {object} pageDownKeyUp
+* @fires {object} endKeyUp
+* @fires {object} homeKeyUp
+* @fires {object} leftArrowKeyUp
+* @fires {object} upArrowKeyUp
+* @fires {object} downArrowKeyUp
+* @fires {object} rightArrowKeyUp
 */
 (function ($, window, document, undefined) {
 
@@ -40,47 +51,47 @@
                 var onKeyDown = function(e) {
                     switch(e.keyCode) {
                         case keyCodes.ENTER:
-                            $this.trigger(normalizeEvent('enter.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('enterKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.ESCAPE:
-                            $this.trigger(normalizeEvent('escape.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('escapeKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.SPACE:
-                            $this.trigger(normalizeEvent('space.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('spaceKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.PAGEUP:
-                            $this.trigger(normalizeEvent('pageup.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('pageUpKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.PAGEDOWN:
-                            $this.trigger(normalizeEvent('pagedown.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('pageDownKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.END:
-                            $this.trigger(normalizeEvent('end.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('endKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.HOME:
-                            $this.trigger(normalizeEvent('home.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('homeKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.LEFTARROW:
-                            $this.trigger(normalizeEvent('leftarrow.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('leftArrowKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.UPARROW:
-                            $this.trigger(normalizeEvent('uparrow.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('upArrowKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.RIGHTARROW:
-                            $this.trigger(normalizeEvent('rightarrow.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('rightArrowKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.DOWNARROW:
-                            $this.trigger(normalizeEvent('downarrow.commonKeyDown', e));
+                            $this.trigger(normalizeEvent('downArrowKeyDown', e));
                             /* istanbul ignore next */
                             break;
                         /* istanbul ignore next */
@@ -92,47 +103,47 @@
                 var onKeyUp = function(e) {
                     switch(e.keyCode) {
                         case keyCodes.ENTER:
-                            $this.trigger(normalizeEvent('enter.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('enterKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.ESCAPE:
-                            $this.trigger(normalizeEvent('escape.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('escapeKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.SPACE:
-                            $this.trigger(normalizeEvent('space.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('spaceKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.PAGEUP:
-                            $this.trigger(normalizeEvent('pageup.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('pageUpKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.PAGEDOWN:
-                            $this.trigger(normalizeEvent('pagedown.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('pageDownKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.END:
-                            $this.trigger(normalizeEvent('end.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('endKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.HOME:
-                            $this.trigger(normalizeEvent('home.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('homeKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.LEFTARROW:
-                            $this.trigger(normalizeEvent('leftarrow.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('leftArrowKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.UPARROW:
-                            $this.trigger(normalizeEvent('uparrow.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('upArrowKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.RIGHTARROW:
-                            $this.trigger(normalizeEvent('rightarrow.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('rightArrowKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         case keyCodes.DOWNARROW:
-                            $this.trigger(normalizeEvent('downarrow.commonKeyUp', e));
+                            $this.trigger(normalizeEvent('downArrowKeyUp', e));
                             /* istanbul ignore next */
                             break;
                         /* istanbul ignore next */
