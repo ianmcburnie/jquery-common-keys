@@ -1,7 +1,7 @@
 {
   "name": "@ebay/jquery-common-keys",
   "description": "jQuery collection plugin that triggers events for common accessibility keys e.g. ENTER, SPACE, ESC, ARROW KEYS.",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "main": "./jquery.commonkeys.js",
   "scripts": {
     "start": "karma start --autoWatch true --singleRun false",
