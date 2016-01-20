@@ -5,7 +5,7 @@
     <a href='https://coveralls.io/github/ianmcburnie/jquery-common-keys?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-common-keys/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
 </p>
 
-jQuery collection plugin that triggers events for common accessibility keys, e.g. enter, space, esc, arrows.
+jQuery collection plugin that triggers events for common accessibility keys, e.g. enter, space, esc, arrows for `keydown` and `keyup` events. If you only require `keydown` events, please use [@ebay/jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown) instead.
 
 ```js
 $(collection).commonKeys();
@@ -13,9 +13,7 @@ $(collection).commonKeys();
 
 ## Experimental
 
-This plugin is still in an experimental state, until it reaches v1.0.0 you must consider all minor releases as breaking changes. Patch releases may introduce new features, but will be backwards compatible.
-
-Please use the tilde range specifier in your package.json to pin to a fixed major and minor version.
+This plugin is still in an experimental state, until it reaches v1.0.0 you must consider all minor releases as breaking changes. Patch releases may introduce new features, but will be backwards compatible. Until v1.0.0 release, please use the caret range specifier in your package.json to pin to a fixed minor version.
 
 ## Install
 
@@ -78,6 +76,24 @@ $.fn.commonKeys.keyCodes = {
     DOWNARROW: 40
 };
 ```
+
+## Dependencies
+
+* [jquery](https://jquery.com/)
+* [@ebay/jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown)
+
+## Bundling
+
+This plugin currently supports bundling via [Lasso.js](https://github.com/lasso-js/lasso). Simply add the following dependencies to your browser.json file:
+
+`js
+{
+    "dependencies":[
+        {"require-run": "jquery"},
+        {"require-run": "@ebay/jquery-common-keys"}
+    ]
+}
+`
 
 ## Development
 
