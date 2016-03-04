@@ -3,6 +3,8 @@
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-common-keys"><img src="https://api.travis-ci.org/ianmcburnie/jquery-common-keys.svg?branch=master" alt="Build Status" /></a>
     <a href='https://coveralls.io/github/ianmcburnie/jquery-common-keys?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-common-keys/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-common-keys"><img src="https://david-dm.org/ianmcburnie/jquery-common-keys.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-common-keys#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-common-keys/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 jQuery collection plugin that triggers events for common accessibility keys, e.g. enter, space, esc, arrows for `keydown` and `keyup` events. If you only require `keydown` events, please use [@ebay/jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown) instead.
