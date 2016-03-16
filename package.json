@@ -1,5 +1,5 @@
 {
-  "name": "@ebay/jquery-common-keys",
+  "name": "jquery-common-keys",
   "description": "jQuery collection plugin that triggers events for common accessibility keys e.g. ENTER, SPACE, ESC, ARROW KEYS.",
   "version": "0.5.1",
   "scripts": {
@@ -43,10 +43,10 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18",
     "rimraf": "^2.4.4",
-    "@ebay/jquery-common-keydown": "~0.0.1"
+    "jquery-common-keydown": "~0.0.1"
   },
   "peerDependencies": {
     "jquery": ">=1.11 < 3",
-    "@ebay/jquery-common-keydown": "~0.0.1"
+    "jquery-common-keydown": "~0.0.1"
   }
 }

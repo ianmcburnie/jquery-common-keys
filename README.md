@@ -1,4 +1,4 @@
-# @ebay/jquery-common-keys
+# jquery-common-keys
 
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-common-keys"><img src="https://api.travis-ci.org/ianmcburnie/jquery-common-keys.svg?branch=master" alt="Build Status" /></a>
@@ -7,7 +7,7 @@
     <a href="https://david-dm.org/ianmcburnie/jquery-common-keys#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-common-keys/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
-jQuery collection plugin that triggers events for common accessibility keys, e.g. enter, space, esc, arrows for `keydown` and `keyup` events. If you only require `keydown` events, please use [@ebay/jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown) instead.
+jQuery collection plugin that triggers events for common accessibility keys, e.g. enter, space, esc, arrows for `keydown` and `keyup` events. If you only require `keydown` events, please use [jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown) instead.
 
 ```js
 $(collection).commonKeys();
@@ -20,7 +20,7 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 ## Install
 
 ```js
-npm install @ebay/jquery-common-keys
+npm install jquery-common-keys
 ```
 
 ## Example
@@ -82,7 +82,7 @@ $.fn.commonKeys.keyCodes = {
 ## Dependencies
 
 * [jquery](https://jquery.com/)
-* [@ebay/jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown)
+* [jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown)
 
 ## Bundling
 
