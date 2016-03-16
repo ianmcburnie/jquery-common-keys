@@ -19,9 +19,18 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 
 ## Install
 
+<strike>
+```
+npm install @ebay/jquery-common-keys
+```
+</strike>
+
 ```js
 npm install jquery-common-keys
 ```
+
+**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
+
 
 ## Example
 
