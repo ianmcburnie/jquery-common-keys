@@ -1,21 +1,10 @@
 /**
 * @function $.fn.commonKeys
 * @name jquery-common-keys
-* @version 0.5.1
+* @version 0.6.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc jQuery collection plugin that triggers events for common accessibility
 * keys on keydown e.g. ENTER, SPACE, ESCAPE, ARROW KEYS
-* @fires {object} enterKeyDown
-* @fires {object} escapeKeyDown
-* @fires {object} spaceKeyDown
-* @fires {object} pageUpKeyDown
-* @fires {object} pageDownKeyDown
-* @fires {object} endKeyDown
-* @fires {object} homeKeyDown
-* @fires {object} leftArrowKeyDown
-* @fires {object} upArrowKeyDown
-* @fires {object} downArrowKeyDown
-* @fires {object} rightArrowKeyDown
 * @fires {object} enterKeyUp
 * @fires {object} escapeKeyUp
 * @fires {object} spaceKeyUp
@@ -28,30 +17,26 @@
 * @fires {object} downArrowKeyUp
 * @fires {object} rightArrowKeyUp
 */
-(function ($, window, document, undefined) {
-
+(function($, window, document, undefined) {
     var pluginName = 'jquery-common-keys';
 
     var normalizeEvent = function(type, e) {
-        return $.Event(type, { originalEvent: e });
+        return $.Event(type, {originalEvent: e});
     };
 
     $.fn.commonKeys = function commonKeys() {
-
         return this.each(function onEach() {
-
             // check element does not already have this plugin
             if (!$.data(this, pluginName)) {
-
                 jQuery.data(this, pluginName, 'true');
 
-                var $this = $(this),
-                    keyCodes = $.fn.commonKeys.keyCodes;
+                var $this = $(this);
+                var keyCodes = $.fn.commonKeys.keyCodes;
 
                 $this.commonKeyDown();
 
                 var onKeyUp = function(e) {
-                    switch(e.keyCode) {
+                    switch (e.keyCode) {
                         case keyCodes.ENTER:
                             $this.trigger(normalizeEvent('enterKeyUp', e));
                             /* istanbul ignore next */
@@ -120,5 +105,4 @@
         RIGHTARROW: 39,
         DOWNARROW: 40
     };
-
 }(jQuery, window, document));
