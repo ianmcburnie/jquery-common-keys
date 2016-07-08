@@ -1,7 +1,7 @@
 /**
 * @function $.fn.commonKeys
 * @name jquery-common-keys
-* @version 0.6.0
+* @version 0.7.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc jQuery collection plugin that triggers events for common accessibility
 * keys on keydown e.g. ENTER, SPACE, ESCAPE, ARROW KEYS
@@ -24,8 +24,8 @@
         return $.Event(type, {originalEvent: e});
     };
 
-    $.fn.commonKeys = function commonKeys() {
-        return this.each(function onEach() {
+    $.fn.commonKeys = function commonKeys(selector) {
+        return this.each(function onEach(selector) {
             // check element does not already have this plugin
             if (!$.data(this, pluginName)) {
                 jQuery.data(this, pluginName, 'true');
@@ -33,7 +33,7 @@
                 var $this = $(this);
                 var keyCodes = $.fn.commonKeys.keyCodes;
 
-                $this.commonKeyDown();
+                $this.commonKeyDown(selector);
 
                 var onKeyUp = function(e) {
                     switch (e.keyCode) {
@@ -87,7 +87,7 @@
                     }
                 };
 
-                $this.on('keyup', onKeyUp);
+                $this.on('keyup', selector, onKeyUp);
             }
         });
     };
