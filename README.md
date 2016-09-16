@@ -19,30 +19,32 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 
 ## Install
 
-<strike>
-```
-npm install @ebay/jquery-common-keys
-```
-</strike>
-
 ```js
 npm install jquery-common-keys
 ```
 
-**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
-
-
 ## Example
 
 ```html
-<div tabindex="0" role="button">Fake Button</div>
-
-$('div[role=button]').commonKeys().on('spaceKeyDown enterKeyDown', function(e) {
-    // activate fake button
-});
+<ul class="widget">
+    <li><button>Button 1</button></li>
+    <li><button>Button 2</button></li>
+    <li><button>Button 3</button></li>
+</ul>
 ```
 
-*NOTE:* this example is for demo purposes only. Never use a `div` tag for a button!
+```js
+// non-delegated event listener
+$('.widget').commonKeys().on('spaceKeyDown enterKeyUp', function(e) {
+    // this = ul
+    // e.target = button
+});
+// delegated event listener
+$('.widget').commonKeys().on('spaceKeyDown enterKeyUp', 'button', function(e) {
+    // this = button
+    // e.target = button
+});
+```
 
 ## Events
 
@@ -92,19 +94,6 @@ $.fn.commonKeys.keyCodes = {
 
 * [jquery](https://jquery.com/)
 * [jquery-common-keydown](https://github.com/ianmcburnie/jquery-common-keydown)
-
-## Bundling
-
-This plugin currently supports bundling via [Lasso.js](https://github.com/lasso-js/lasso). Simply add the following dependencies to your browser.json file:
-
-`js
-{
-    "dependencies":[
-        {"require-run": "jquery"},
-        {"require-run": "@ebay/jquery-common-keys"}
-    ]
-}
-`
 
 ## Development
 
